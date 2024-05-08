@@ -6,6 +6,10 @@ import { FaBars } from "react-icons/fa";
 const HomePage = () => {
   const [showMenu, setShowMenu] = useState(false);
 
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <div className="container">
       <div className="headline">
@@ -20,18 +24,17 @@ const HomePage = () => {
           <img src={logo} alt="Logo" className="logoIcon" />
           <p>Medify</p>
         </div>
-        <FaBars className="hamburger" onClick={() => setShowMenu(!showMenu)} />
-        {showMenu && (
-          <ul className="infoList">
-            <li>Find Doctors</li>
-            <li>Hospitals</li>
-            <li>Medicines</li>
-            <li>Surgeries</li>
-            <li>Software for Provider</li>
-            <li>Facilities</li>
-            <button className="signInButton">My Bookings</button>
-          </ul>
-        )}
+        <FaBars className="hamburger" onClick={toggleMenu} />
+
+        <ul className={`infoList ${showMenu ? "show" : ""}`}>
+          <li>Find Doctors</li>
+          <li>Hospitals</li>
+          <li>Medicines</li>
+          <li>Surgeries</li>
+          <li>Software for Provider</li>
+          <li>Facilities</li>
+          <button className="signInButton">My Bookings</button>
+        </ul>
       </div>
     </div>
   );
