@@ -1,40 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
 import "../homepage/HomePage.css";
-import logo from "../../assets/medify logo.png";
-import { FaBars } from "react-icons/fa";
+import NavBar from "../navbar/NavBar";
+import HeroImage from "../../assets/hero image.png";
+import SearchBox from "../searchbox/SearchBox";
+import Discount from "../discount/Discount";
 
 const HomePage = () => {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
   return (
-    <div className="container">
-      <div className="headline">
-        <span>
-          The health and well-being of our patients and their health care team
-          will always be our priority, so we follow the best practices for
-          cleanliness.
-        </span>
-      </div>
-      <div className="navBar">
-        <div className="logo">
-          <img src={logo} alt="Logo" className="logoIcon" />
-          <p>Medify</p>
+    <div className="main-container">
+      <div className="container">
+        <NavBar />
+        <div className="hero-section">
+          <div className="hero-tags">
+            <div className="first-tag">
+              <p className="tag-content">Skip the travel! Find Online</p>
+              <p className="hero-tag">
+                Medical <span className="hero-tag-part">Centers</span>
+              </p>
+            </div>
+            <div className="info-tag">
+              <p className="info-tag-para">
+                Connect instantly with a 24x7 specialist or choose to
+              </p>
+              <p className="info-tag-para">video visit a particular doctor.</p>
+            </div>
+            <button className="btn">Find Center</button>
+          </div>
+          <div className="hero-image-container">
+            <img src={HeroImage} alt="heroImage" />
+          </div>
         </div>
-        <FaBars className="hamburger" onClick={toggleMenu} />
-
-        <ul className={`infoList ${showMenu ? "show" : ""}`}>
-          <li>Find Doctors</li>
-          <li>Hospitals</li>
-          <li>Medicines</li>
-          <li>Surgeries</li>
-          <li>Software for Provider</li>
-          <li>Facilities</li>
-          <button className="signInButton">My Bookings</button>
-        </ul>
+        <div className="discount-container">
+          <Discount />
+        </div>
+        <div className="searchBox">
+          <SearchBox />
+        </div>
       </div>
     </div>
   );

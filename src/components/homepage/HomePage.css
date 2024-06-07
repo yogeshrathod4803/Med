@@ -1,126 +1,152 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .container {
-  /* padding: 0 20px; */
-}
-
-.headline {
-  width: 100%;
-  height: 40px;
-  gap: 0px;
-  opacity: 0px;
-  background: #2aa7ff;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.navBar {
   background: linear-gradient(
     81deg,
     #e7f0ff 9.01%,
     rgba(232, 241, 255, 0.47) 89.11%
   );
-  padding: 10px;
+  width: 100%;
+  height: 832px;
+  /* color: #e7f0ff; */
+  top: 40px;
+}
+
+.hero-section {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
+  padding: 20px;
+  /* width: auto; */
 }
 
-.logo {
-  color: #2aa7ff;
-  font-size: 18px;
-  font-weight: 700;
-  margin-left: 8rem;
-  display: flex;
-  gap: 4px;
+.hero-tags {
+  /* max-width: 663px; */
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.infoList {
-  list-style-type: none;
-  display: flex;
-  margin-right: 10rem;
-  align-items: center;
-  gap: 1.5rem;
+.first-tag {
+  margin-bottom: 20px;
 }
 
-.infoList li {
-  margin-right: 20px;
+.tag-content {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem; /* 31px */
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #102851;
+}
+
+.hero-tag {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 3.5rem; /* 56px */
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #102851;
+}
+
+.hero-tag-part {
+  color: #2aa7ff;
+}
+
+.info-tag {
+  margin-bottom: 20px;
+}
+
+.info-tag-para {
+  color: #5c6169;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem; /* 20px */
   font-weight: 400;
+  line-height: 0.6;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
 }
 
-.infoList li:hover {
-  text-decoration: underline;
-}
-
-.signInButton {
-  width: 130px;
-  height: 40px;
-  right: 782px;
-  gap: 10px;
+.btn {
   border-radius: 8px;
-  opacity: 0px;
   background: #2aa8ff;
-  border: 1px #ffffff solid;
-  color: #e7f0ff;
+  border: none;
+  color: #fff;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.hamburger {
-  display: none;
-  font-size: 24px;
-  color: #121212;
+  font-size: 1rem; /* 16px */
+  font-weight: 500;
+  padding: 12px 36px;
   cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 30px;
 }
 
-@media screen and (max-width: 768px) {
-  .headline {
-    width: 100%;
-    height: 40px;
-    gap: 0px;
-    opacity: 0px;
-    padding: 0 2px 0 2px;
-    background: #2aa7ff;
-    color: #ffffff;
-    font-family: "Poppins", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.btn:hover {
+  background: #1a8ed9;
+}
+
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 55%; */
+  /* max-width: 800px; */
+}
+
+.hero-image-container img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 50px;
+  margin-left: auto;
+  /* opacity: 0px; */
+  /* angle: -180 deg; */
+}
+
+.searchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 500px;
+
+  /* position: relative; */
+}
+
+.discount-container .swiper-slide img {
+  border-radius: 10px;
+  padding-bottom: 52px;
+
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.discount-container .swiper-slide img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+@media (max-width: 767px) {
+  .discount-container {
+    padding: 20px 10px;
   }
 
-  .logo {
-    margin-left: 0;
-    justify-content: center;
+  .discount-container .swiper-slide img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 135px;
   }
 
-  .hamburger {
-    display: block;
+  .hero-tags {
+    text-align: left;
   }
 
-  .infoList {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 12%;
-    left: 70%;
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .infoList.show {
-    display: flex;
+  .hero-image-container {
+    margin: 0;
   }
 }
