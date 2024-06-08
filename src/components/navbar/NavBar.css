@@ -1,0 +1,119 @@
+.headline {
+  width: 100%;
+  height: 40px;
+  gap: 0px;
+  opacity: 0px;
+  background: #2aa7ff;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navBar {
+  background: linear-gradient(
+    81deg,
+    #e7f0ff 9.01%,
+    rgba(232, 241, 255, 0.47) 89.11%
+  );
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #2aa7ff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 8rem;
+  display: flex;
+  gap: 4px;
+}
+
+.infoList {
+  list-style-type: none;
+  display: flex;
+  margin-right: 10rem;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.infoList li {
+  margin-right: 20px;
+  color: #102851;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.infoList li:hover {
+  text-decoration: underline;
+}
+
+.signInButton {
+  width: 130px;
+  height: 40px;
+  right: 782px;
+  gap: 10px;
+  border-radius: 8px;
+  opacity: 0px;
+  background: #2aa8ff;
+  border: 1px #ffffff solid;
+  color: #e7f0ff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #121212;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .headline {
+    width: 100%;
+    height: 40px;
+    gap: 0px;
+    opacity: 0px;
+    padding: 0 2px 0 2px;
+    background: #2aa7ff;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .infoList {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 12%;
+    left: 70%;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .infoList.show {
+    display: flex;
+  }
+}
